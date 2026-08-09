@@ -1,17 +1,9 @@
-import Hero from "@/components/sections/Hero";
-import FeaturedProjects from "@/components/sections/FeaturedProjects";
-import Experience from "@/components/sections/Experience";
-import Skills from "@/components/sections/Skills";
-import Education from "@/components/sections/Education";
+import Contact from "@/components/sections/Contact";
 
-export default function Home() {
+export default function ContactPage() {
   return (
     <main>
-      <Hero />
-      <FeaturedProjects />
-      <Experience />
-      <Skills />
-      <Education />
+      <Contact />
     </main>
   );
 }

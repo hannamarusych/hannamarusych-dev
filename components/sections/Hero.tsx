@@ -4,21 +4,10 @@ import { siteConfig } from "@/content/site";
 
 export default function Hero() {
   return (
-    <section className="mx-auto grid min-h-[80vh] max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2">
+    <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.4fr_0.8fr] lg:py-28">
       <div>
-        <div className="mb-8">
-          <Image
-            src="/profile.png"
-            alt="Hanna Marusych"
-            width={140}
-            height={140}
-            priority
-            className="h-36 w-36 rounded-full border-4 border-blue-600 object-cover"
-          />
-        </div>
-
         <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
-          {siteConfig.location}
+          DevOps Engineer
         </p>
 
         <h1 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl">
@@ -33,7 +22,8 @@ export default function Hero() {
           DevOps Engineer with 5+ years of experience designing, building, and
           operating cloud platforms on AWS and Kubernetes. Experienced in
           Infrastructure as Code, CI/CD automation, cloud infrastructure, and
-          platform engineering.
+          platform engineering that enables development teams to deliver
+          software faster, more securely, and at scale.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-2">
@@ -102,47 +92,30 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="rounded-3xl border bg-gray-50 p-8 shadow-sm">
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
-          Professional Focus
-        </p>
-
-        <h3 className="mt-4 text-3xl font-bold">
-          Building reliable cloud platforms.
-        </h3>
-
-        <p className="mt-4 leading-7 text-gray-600">
-          Focused on secure AWS infrastructure, Kubernetes platform engineering,
-          Terraform-based Infrastructure as Code, CI/CD automation,
-          observability, and AI-assisted engineering workflows.
-        </p>
-
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border bg-white p-5">
-            <p className="font-semibold">Cloud & Infrastructure</p>
-            <p className="mt-2 text-sm text-gray-600">
-              AWS · EKS · ECS · VPC · IAM · Terraform
-            </p>
+      <div className="flex justify-center lg:justify-end">
+        <div className="w-full max-w-sm rounded-3xl border bg-white p-6 shadow-sm">
+          <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
+            <Image
+              src="/profile.png"
+              alt="Hanna Marusych"
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 1024px) 320px, 360px"
+            />
           </div>
 
-          <div className="rounded-2xl border bg-white p-5">
-            <p className="font-semibold">Platform Engineering</p>
-            <p className="mt-2 text-sm text-gray-600">
-              Kubernetes · Docker · Helm · CI/CD
-            </p>
-          </div>
+          <div className="mt-6 text-center">
+            <h3 className="text-2xl font-bold">
+              {siteConfig.name}
+            </h3>
 
-          <div className="rounded-2xl border bg-white p-5">
-            <p className="font-semibold">Observability</p>
-            <p className="mt-2 text-sm text-gray-600">
-              Prometheus · Grafana · CloudWatch
+            <p className="mt-2 text-gray-600">
+              DevOps Engineer · Cloud & Platform Engineering
             </p>
-          </div>
 
-          <div className="rounded-2xl border bg-white p-5">
-            <p className="font-semibold">AI-Assisted Engineering</p>
-            <p className="mt-2 text-sm text-gray-600">
-              Claude Code · MCP · AWS Bedrock · Context Engineering
+            <p className="mt-3 text-sm text-gray-500">
+              Chicago, IL
             </p>
           </div>
         </div>

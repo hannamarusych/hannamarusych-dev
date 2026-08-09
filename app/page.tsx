@@ -1,9 +1,9 @@
-import Skills from "@/components/sections/Skills";
+import Hero from "@/components/sections/Hero";
 
-export default function SkillsPage() {
+export default function HomePage() {
   return (
     <main>
-      <Skills />
+      <Hero />
     </main>
   );
 }
