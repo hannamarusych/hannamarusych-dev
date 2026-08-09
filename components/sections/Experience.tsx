@@ -1,7 +1,7 @@
 export default function Experience() {
   return (
-    <section id="experience" className="border-b border-gray-200">
-      <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+    <section id="experience" className="border-t border-gray-200 bg-white">
+      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
             Experience
@@ -22,11 +22,11 @@ export default function Experience() {
           <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                2023 — Present
+                April 2023 — Present
               </p>
 
               <p className="mt-2 text-sm text-gray-500">
-                Chicago, IL
+                Chicago, IL · Hybrid
               </p>
             </div>
 
@@ -36,7 +36,7 @@ export default function Experience() {
               </p>
 
               <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
-                DevOps Engineer / Cloud Engineer
+                DevOps Engineer
               </h3>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
@@ -90,11 +90,11 @@ export default function Experience() {
           <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
             <div>
               <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                Previous
+                August 2020 — March 2023
               </p>
 
               <p className="mt-2 text-sm text-gray-500">
-                Chicago, IL
+                New York, NY · Remote
               </p>
             </div>
 
@@ -104,14 +104,13 @@ export default function Experience() {
               </p>
 
               <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
-                DevOps / Cloud Engineering
+                Cloud Engineer
               </h3>
 
               <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
-                Worked with AWS-based infrastructure supporting high-scale
-                sports and gaming workloads, with a focus on cloud
-                infrastructure, automation, reliability, and data-platform
-                operations.
+                Managed AWS-based infrastructure supporting high-scale sports
+                and gaming workloads, with a focus on cloud infrastructure,
+                automation, reliability, and data-platform operations.
               </p>
 
               <div className="mt-8 grid gap-8 md:grid-cols-2">
@@ -129,7 +128,7 @@ export default function Experience() {
 
                 <div>
                   <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Scale & impact
+                    Scale &amp; Impact
                   </p>
 
                   <p className="mt-3 text-base leading-7 text-gray-600">
