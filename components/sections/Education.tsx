@@ -2,19 +2,19 @@ import { certifications } from "@/content/certifications";
 
 export default function Education() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="grid gap-8 lg:grid-cols-2">
+    <section className="border-b border-gray-200">
+      <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 lg:grid-cols-2 lg:px-8">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
             Education
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold">
-            Education
+          <h2 className="mt-4 text-4xl font-bold tracking-tight text-gray-950">
+            Academic Background
           </h2>
 
-          <div className="mt-6 rounded-2xl border bg-white p-6">
-            <h3 className="text-xl font-bold">
+          <div className="mt-10 border-t border-gray-300 pt-7">
+            <h3 className="text-xl font-bold text-gray-950">
               Bachelor&apos;s Degree in Management of Organizations
             </h3>
 
@@ -29,21 +29,21 @@ export default function Education() {
         </div>
 
         <div>
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
             Certifications
           </p>
 
-          <h2 className="mt-2 text-4xl font-bold">
-            Certifications
+          <h2 className="mt-4 text-4xl font-bold tracking-tight text-gray-950">
+            Professional Certifications
           </h2>
 
-          <div className="mt-6 space-y-4">
+          <div className="mt-10 border-t border-gray-300">
             {certifications.map((certification) => (
               <div
                 key={certification.name}
-                className="rounded-2xl border bg-white p-5"
+                className="border-b border-gray-200 py-5"
               >
-                <p className="font-semibold">
+                <p className="font-semibold text-gray-900">
                   {certification.name}
                 </p>
               </div>

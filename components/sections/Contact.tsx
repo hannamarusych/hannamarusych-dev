@@ -1,88 +1,110 @@
-import { Mail, Phone } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
 export default function Contact() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-          Contact
-        </p>
-
-        <h2 className="mt-2 text-5xl font-bold">
-          Let&apos;s Connect
-        </h2>
-
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Open to opportunities in DevOps, Cloud Engineering, and Platform
-          Engineering.
-        </p>
-      </div>
-
-      <div className="grid gap-6 md:grid-cols-2">
-        <a
-          href={`mailto:${siteConfig.email}`}
-          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="flex items-center gap-4">
-            <div className="rounded-xl bg-blue-50 p-3">
-              <Mail className="h-6 w-6 text-blue-600" />
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-500">Email</p>
-              <p className="font-semibold group-hover:text-blue-600">
-                {siteConfig.email}
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}
-          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div className="flex items-center gap-4">
-            <div className="rounded-xl bg-blue-50 p-3">
-              <Phone className="h-6 w-6 text-blue-600" />
-            </div>
-
-            <div>
-              <p className="text-sm text-gray-500">Phone</p>
-              <p className="font-semibold group-hover:text-blue-600">
-                {siteConfig.phone}
-              </p>
-            </div>
-          </div>
-        </a>
-
-        <a
-          href={siteConfig.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
+    <section id="contact" className="border-b border-gray-200">
+      <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div>
-            <p className="text-sm text-gray-500">GitHub</p>
-            <p className="mt-1 font-semibold group-hover:text-blue-600">
-              github.com/hannamarusych
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+              Contact
             </p>
-          </div>
-        </a>
 
-        <a
-          href={siteConfig.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-        >
-          <div>
-            <p className="text-sm text-gray-500">LinkedIn</p>
-            <p className="mt-1 font-semibold group-hover:text-blue-600">
-              linkedin.com/in/hanna-marusych
+            <h2 className="mt-4 text-5xl font-bold tracking-tight text-gray-950">
+              Let&apos;s build something reliable.
+            </h2>
+
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+              I&apos;m open to opportunities in DevOps, Cloud Engineering,
+              Platform Engineering, and infrastructure-focused roles.
             </p>
+
+            <p className="mt-6 max-w-2xl text-base leading-7 text-gray-500">
+              If you&apos;re working on cloud infrastructure, Kubernetes,
+              platform automation, or the next stage of engineering
+              modernization, I&apos;d be happy to connect.
+            </p>
+
+            <div className="mt-10">
+              <a
+                href={`mailto:${siteConfig.email}`}
+                className="inline-flex border border-gray-900 bg-gray-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-gray-900"
+              >
+                Get in touch
+              </a>
+            </div>
           </div>
-        </a>
+
+          <div className="border-t border-gray-300 lg:border-t-0 lg:border-l lg:pl-10">
+            <div className="space-y-7">
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                  Email
+                </p>
+
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="mt-2 block text-base font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
+                >
+                  {siteConfig.email}
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                  Phone
+                </p>
+
+                <a
+                  href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}
+                  className="mt-2 block text-base font-medium text-gray-900"
+                >
+                  {siteConfig.phone}
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                  GitHub
+                </p>
+
+                <a
+                  href={siteConfig.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-base font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
+                >
+                  github.com/hannamarusych
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                  LinkedIn
+                </p>
+
+                <a
+                  href={siteConfig.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-2 block text-base font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
+                >
+                  linkedin.com/in/hanna-marusych
+                </a>
+              </div>
+
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
+                  Location
+                </p>
+
+                <p className="mt-2 text-base font-medium text-gray-900">
+                  Chicago, IL
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

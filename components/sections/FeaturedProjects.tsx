@@ -1,34 +1,65 @@
-import ProjectCard from "@/components/cards/ProjectCard";
 import { projects } from "@/content/projects";
-
 export default function FeaturedProjects() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-          Selected Work
-        </p>
+    <section id="work" className="border-b border-gray-200">
+      <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+            Selected Work
+          </p>
 
-        <h2 className="mt-2 text-5xl font-bold">
-          Featured Projects
-        </h2>
+          <h2 className="mt-4 text-5xl font-bold tracking-tight text-gray-950">
+            Projects that show how I work.
+          </h2>
 
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Selected cloud, DevOps, infrastructure, and AI-assisted engineering
-          projects.
-        </p>
-      </div>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            A few examples of infrastructure, platform engineering, cloud
+            migration, and AI-assisted engineering work. The goal is not just
+            to list technologies, but to show the problems I solve with them.
+          </p>
+        </div>
 
-      <div className="grid gap-6 md:grid-cols-3">
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            title={project.title}
-            description={project.description}
-            technologies={project.technologies}
-            github={project.github}
-          />
-        ))}
+        <div className="mt-16 space-y-0">
+          {projects.map((project, index) => (
+            <article
+              key={project.title}
+              className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[80px_1fr_180px]"
+            >
+              <div className="text-sm font-semibold text-gray-400">
+                {String(index + 1).padStart(2, "0")}
+              </div>
+
+              <div>
+                <h3 className="text-3xl font-bold tracking-tight text-gray-950">
+                  {project.title}
+                </h3>
+
+                <p className="mt-5 max-w-3xl text-lg leading-8 text-gray-600">
+                  {project.description}
+                </p>
+
+                <div className="mt-6 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
+                  {project.technologies.map((technology) => (
+                    <span key={technology}>{technology}</span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="lg:text-right">
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
+                  >
+                    View project →
+                  </a>
+                )}
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

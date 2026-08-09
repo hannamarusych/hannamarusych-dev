@@ -1,88 +1,165 @@
-import { experience } from "@/content/experience";
-import { Badge } from "@/components/ui/badge";
-
 export default function Experience() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-          Career
-        </p>
+    <section id="experience" className="border-b border-gray-200">
+      <div className="mx-auto max-w-6xl px-6 py-24 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+            Experience
+          </p>
 
-        <h2 className="mt-2 text-5xl font-bold">
-          Experience
-        </h2>
+          <h2 className="mt-4 text-5xl font-bold tracking-tight text-gray-950">
+            Building infrastructure that has to work.
+          </h2>
 
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          DevOps and cloud engineering experience across AWS, Kubernetes,
-          Terraform, CI/CD, security, and platform engineering.
-        </p>
-      </div>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            My experience spans cloud infrastructure, Kubernetes platforms,
+            automation, security, and production operations across
+            business-critical systems.
+          </p>
+        </div>
 
-      <div className="space-y-8">
-        {experience.map((item) => (
-          <div
-            key={`${item.company}-${item.role}`}
-            className="rounded-2xl border bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-          >
-            <div className="flex flex-col justify-between gap-4 md:flex-row">
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
-                  {item.period}
-                </p>
+        <div className="mt-16">
+          <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                2023 — Present
+              </p>
 
-                <h3 className="mt-2 text-2xl font-bold">
-                  {item.role}
-                </h3>
-
-                <p className="mt-1 text-lg font-medium text-gray-500">
-                  {item.company}
-                </p>
-
-                <p className="mt-1 text-sm text-gray-500">
-                  {item.location}
-                </p>
-              </div>
-
-              <div className="flex flex-wrap gap-2 md:max-w-md md:justify-end">
-                {item.company === "Egencia" ? (
-                  <>
-                    <Badge variant="secondary">AWS</Badge>
-                    <Badge variant="secondary">Kubernetes</Badge>
-                    <Badge variant="secondary">Terraform</Badge>
-                    <Badge variant="secondary">GitHub Actions</Badge>
-                    <Badge variant="secondary">Prometheus</Badge>
-                    <Badge variant="secondary">Grafana</Badge>
-                  </>
-                ) : (
-                  <>
-                    <Badge variant="secondary">AWS</Badge>
-                    <Badge variant="secondary">EKS</Badge>
-                    <Badge variant="secondary">Terraform</Badge>
-                    <Badge variant="secondary">GitHub Actions</Badge>
-                    <Badge variant="secondary">ECR</Badge>
-                    <Badge variant="secondary">CloudWatch</Badge>
-                  </>
-                )}
-              </div>
+              <p className="mt-2 text-sm text-gray-500">
+                Chicago, IL
+              </p>
             </div>
 
-            <div className="mt-6 space-y-3">
-              {item.responsibilities.map((responsibility) => (
-                <div
-                  key={responsibility}
-                  className="flex gap-3 text-gray-600"
-                >
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">
+                Egencia · American Express Global Business Travel
+              </p>
 
-                  <p className="leading-7">
-                    {responsibility}
+              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
+                DevOps Engineer / Cloud Engineer
+              </h3>
+
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
+                Cloud and platform engineer building and operating AWS and
+                Kubernetes infrastructure that enables Egencia&apos;s global
+                business-travel services to ship and run reliably at scale.
+              </p>
+
+              <div className="mt-8 grid gap-8 md:grid-cols-2">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                    Platform
+                  </p>
+
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    Built and operated Kubernetes platforms with EKS, Docker,
+                    Helm, Terraform, and GitOps delivery workflows. Focused on
+                    repeatable infrastructure and reducing operational
+                    friction for engineering teams.
                   </p>
                 </div>
-              ))}
+
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                    Impact
+                  </p>
+
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    Contributed to the migration of ML model-serving workloads
+                    from AWS SageMaker to Amazon EKS, with an individual
+                    inference workload achieving up to 66% lower operating
+                    costs through Kubernetes-based resource optimization and
+                    autoscaling.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
+                <span>AWS</span>
+                <span>EKS</span>
+                <span>Kubernetes</span>
+                <span>Terraform</span>
+                <span>Helm</span>
+                <span>GitOps</span>
+                <span>Security</span>
+                <span>Observability</span>
+              </div>
             </div>
-          </div>
-        ))}
+          </article>
+
+          <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                Previous
+              </p>
+
+              <p className="mt-2 text-sm text-gray-500">
+                Chicago, IL
+              </p>
+            </div>
+
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">
+                FanDuel
+              </p>
+
+              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
+                DevOps / Cloud Engineering
+              </h3>
+
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
+                Worked with AWS-based infrastructure supporting high-scale
+                sports and gaming workloads, with a focus on cloud
+                infrastructure, automation, reliability, and data-platform
+                operations.
+              </p>
+
+              <div className="mt-8 grid gap-8 md:grid-cols-2">
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                    Platform
+                  </p>
+
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    Worked across AWS infrastructure including EC2, EKS, RDS,
+                    Lambda, and Terraform-managed environments, supporting
+                    production systems and data workloads.
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                    Scale & impact
+                  </p>
+
+                  <p className="mt-3 text-base leading-7 text-gray-600">
+                    Supported infrastructure behind a large-scale consumer
+                    platform while the data platform evolved toward higher
+                    query concurrency, improved workload efficiency, and
+                    significantly lower operating costs.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
+                <span>AWS</span>
+                <span>EKS</span>
+                <span>Terraform</span>
+                <span>EC2</span>
+                <span>RDS</span>
+                <span>Lambda</span>
+                <span>Cloud Infrastructure</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="mt-8 border-t border-gray-200 pt-10">
+          <p className="max-w-3xl text-base leading-7 text-gray-500">
+            I&apos;m most interested in the problems where infrastructure,
+            developer experience, reliability, and security overlap.
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -1,121 +1,122 @@
-import Image from "next/image";
 import { ArrowRight, Download } from "lucide-react";
+import Link from "next/link";
 import { siteConfig } from "@/content/site";
 
 export default function Hero() {
   return (
-    <section className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-20 lg:grid-cols-[1.4fr_0.8fr] lg:py-28">
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-600">
-          DevOps Engineer
-        </p>
+    <section className="border-b border-gray-200">
+      <div className="mx-auto grid max-w-6xl gap-16 px-6 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:px-8 lg:py-32">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+            DevOps Engineer · Cloud & Platform Engineering
+          </p>
 
-        <h1 className="mt-4 text-5xl font-bold tracking-tight sm:text-6xl">
-          {siteConfig.name}
-        </h1>
+          <h1 className="mt-6 max-w-4xl text-6xl font-bold tracking-[-0.04em] text-gray-950 sm:text-7xl">
+            I build the cloud platforms that other engineers build on.
+          </h1>
 
-        <h2 className="mt-4 text-2xl font-semibold text-gray-700 sm:text-3xl">
-          {siteConfig.headline}
-        </h2>
+          <p className="mt-8 max-w-2xl text-xl leading-8 text-gray-600">
+            DevOps Engineer with 6 years of experience building and operating
+            cloud platforms across AWS and Kubernetes. Experienced in
+            infrastructure as code, CI/CD, Kubernetes operations, cloud
+            automation, security, and platform engineering.
+          </p>
 
-        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-          DevOps Engineer with 5+ years of experience designing, building, and
-          operating cloud platforms on AWS and Kubernetes. Experienced in
-          Infrastructure as Code, CI/CD automation, cloud infrastructure, and
-          platform engineering that enables development teams to deliver
-          software faster, more securely, and at scale.
-        </p>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-500">
+            My focus is simple: make infrastructure reliable, repeatable, and
+            easier for engineering teams to use.
+          </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
-          {[
-            "AWS",
-            "Kubernetes",
-            "Terraform",
-            "GitHub Actions",
-            "CI/CD",
-            "Agentic AI Workflows",
-          ].map((technology) => (
-            <span
-              key={technology}
-              className="rounded-full border bg-white px-3 py-1 text-sm font-medium text-gray-700"
+          <div className="mt-10 flex flex-wrap gap-4">
+            <Link
+              href="/projects"
+              className="inline-flex h-12 items-center justify-center bg-gray-950 px-6 text-sm font-semibold text-white transition-colors hover:bg-gray-800"
             >
-              {technology}
-            </span>
-          ))}
-        </div>
+              View selected work
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
 
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="/projects"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-blue-600 px-6 text-sm font-medium text-white transition-colors hover:bg-blue-700"
-          >
-            View Projects
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </a>
-
-          <a
-            href={siteConfig.resume}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-md border border-gray-300 bg-white px-6 text-sm font-medium text-gray-900 transition-colors hover:bg-gray-50"
-          >
-            Download Resume
-            <Download className="ml-2 h-4 w-4" />
-          </a>
-        </div>
-
-        <div className="mt-8 flex flex-wrap items-center gap-5">
-          <a
-            href={siteConfig.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600"
-          >
-            GitHub
-          </a>
-
-          <a
-            href={siteConfig.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600"
-          >
-            LinkedIn
-          </a>
-
-          <a
-            href={`mailto:${siteConfig.email}`}
-            className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-600"
-          >
-            Email
-          </a>
-        </div>
-      </div>
-
-      <div className="flex justify-center lg:justify-end">
-        <div className="w-full max-w-sm rounded-3xl border bg-white p-6 shadow-sm">
-          <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-2xl bg-gray-100">
-            <Image
-              src="/profile.png"
-              alt="Hanna Marusych"
-              fill
-              priority
-              className="object-cover"
-              sizes="(max-width: 1024px) 320px, 360px"
-            />
+            <a
+              href={siteConfig.resume}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-12 items-center justify-center border border-gray-300 px-6 text-sm font-semibold text-gray-900 transition-colors hover:border-gray-900"
+            >
+              Resume
+              <Download className="ml-2 h-4 w-4" />
+            </a>
           </div>
 
-          <div className="mt-6 text-center">
-            <h3 className="text-2xl font-bold">
-              {siteConfig.name}
-            </h3>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500">
+            <a
+              href={siteConfig.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-gray-950"
+            >
+              GitHub
+            </a>
 
-            <p className="mt-2 text-gray-600">
-              DevOps Engineer · Cloud & Platform Engineering
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-colors hover:text-gray-950"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              href={`mailto:${siteConfig.email}`}
+              className="transition-colors hover:text-gray-950"
+            >
+              Email
+            </a>
+          </div>
+        </div>
+
+        <div className="flex items-end lg:justify-end">
+          <div className="max-w-sm border-l border-gray-300 pl-6">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-gray-500">
+              What I build
             </p>
 
-            <p className="mt-3 text-sm text-gray-500">
-              Chicago, IL
+            <div className="mt-6 space-y-6">
+              <div>
+                <h2 className="font-semibold text-gray-950">
+                  Cloud platforms
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-gray-500">
+                  AWS infrastructure, Kubernetes platforms, networking, and
+                  scalable production systems.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-semibold text-gray-950">
+                  Developer platforms
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-gray-500">
+                  Terraform, CI/CD, GitOps, automation, and reusable paths
+                  that reduce operational friction.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="font-semibold text-gray-950">
+                  Reliable systems
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-gray-500">
+                  Security, observability, policy enforcement, and operational
+                  practices designed for production.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 h-px w-16 bg-gray-950" />
+
+            <p className="mt-6 text-sm leading-6 text-gray-500">
+              Infrastructure should make the safe path the easy path.
             </p>
           </div>
         </div>

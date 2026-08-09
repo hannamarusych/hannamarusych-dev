@@ -1,8 +1,8 @@
 export const projects = [
   {
-    title: "Extra Migration",
+    title: "EKS Platform Migration",
     description:
-      "Migrated an Amazon EKS platform from AWS CloudFormation to Terraform using reusable Infrastructure as Code modules. Implemented Terraform state management, AWS IAM/OIDC integration, VPC infrastructure, and environment-based deployment structure.",
+      "Rebuilt an existing EKS platform with Terraform, replacing CloudFormation-managed infrastructure with reusable modules and a structured environment model. The work included Terraform state migration, AWS IAM and OIDC integration, VPC infrastructure, and GitHub Actions automation.",
     technologies: [
       "Terraform",
       "AWS",
@@ -13,29 +13,33 @@ export const projects = [
     ],
     github: "https://github.com/hannamarusych",
   },
+
   {
-    title: "RouteBox Platform",
+    title: "Cloud-Native Application Platform",
     description:
-      "Cloud-native logistics platform built with AWS, ECS, Terraform, CI/CD, monitoring, and microservices architecture.",
+      "Built a cloud-native application platform around AWS, containers, Terraform, and CI/CD. The project focused on repeatable infrastructure, containerized workloads, automated delivery, and operational visibility rather than manually managed application environments.",
     technologies: [
       "AWS",
       "Terraform",
       "ECS",
       "Docker",
       "GitHub Actions",
+      "Monitoring",
     ],
     github: "https://github.com/hannamarusych",
   },
+
   {
-    title: "Agentic AI Workflows",
+    title: "AI-Assisted Engineering",
     description:
-      "AI-assisted engineering workflows supporting technical documentation, infrastructure work, software delivery, troubleshooting, and engineering productivity.",
+      "Developing an AI-first engineering workflow around Claude Code, AWS Bedrock, and MCP. The approach uses agents for infrastructure work, troubleshooting, documentation, and delivery while keeping changes branch-based, review-driven, and controlled before reaching production.",
     technologies: [
-      "Agentic AI",
       "Claude Code",
       "AWS Bedrock",
-      "MCP Servers",
-      "Context Engineering",
+      "MCP",
+      "Agentic AI",
+      "GitHub",
+      "Infrastructure Automation",
     ],
     github: "https://github.com/hannamarusych",
   },
