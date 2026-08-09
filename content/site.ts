@@ -1,8 +1,6 @@
 export const siteConfig = {
   name: "Hanna Marusych",
-
   headline: "DevOps Engineer",
-
   tagline:
     "Building secure cloud platforms on AWS using Kubernetes, Terraform, CI/CD, and Agentic AI Workflows.",
 

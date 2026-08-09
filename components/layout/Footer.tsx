@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-200 py-8">
-      <div className="mx-auto max-w-7xl px-6 text-center">
+    <footer className="border-t py-8">
+      <div className="mx-auto max-w-7xl px-6 text-sm text-gray-500">
         © {new Date().getFullYear()} Hanna Marusych
       </div>
     </footer>

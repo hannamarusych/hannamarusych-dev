@@ -1,29 +1,25 @@
 import ProjectCard from "@/components/cards/ProjectCard";
 import { projects } from "@/content/projects";
 
-export default function FeaturedProjects() {
+export default function ProjectsPage() {
   return (
-    <section
-      id="projects"
-      className="mx-auto max-w-7xl px-6 py-24"
-    >
+    <main className="mx-auto max-w-7xl px-6 py-20">
       <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-[0.25em] text-blue-600">
           Portfolio
         </p>
 
-        <h2 className="mt-2 text-5xl font-bold">
-          Featured Projects
-        </h2>
+        <h1 className="mt-3 text-5xl font-bold tracking-tight">
+          Projects
+        </h1>
 
         <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Production-inspired cloud infrastructure, platform engineering,
-          Kubernetes, Infrastructure as Code, and AI-assisted engineering
-          projects.
+          Selected cloud infrastructure, platform engineering, and
+          AI-assisted engineering projects.
         </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -34,6 +30,6 @@ export default function FeaturedProjects() {
           />
         ))}
       </div>
-    </section>
+    </main>
   );
 }
