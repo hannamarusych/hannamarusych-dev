@@ -11,51 +11,36 @@ export const projects = [
       "IPv6",
       "GitHub Actions",
     ],
-    github: "https://github.com/hannamarusych",
+    github: "https://github.com/hannamarusych/extra-migration",
   },
 
   {
-    title: "AI PR-Review Agent — 30 Repositories",
+    title: "RouteBox — Cloud-Native Microservices Platform",
     description:
-      "Built a first-pass AI PR-review agent as a customized Claude Code GitHub Action running across 30 repositories for two product teams and the platform team. It checks each pull request's diff against its linked Jira ticket to surface requirement gaps and scope drift, and flags exposed secrets before merge. Review prompts are tuned per repo type (Terraform/infra vs. application), and it runs advisory on PR-open for cost efficiency — offloading the senior-reviewer bottleneck as AI-generated code volume grew.",
+      "A production-style logistics platform built as independent services on AWS: a customer-facing Shipments API (the authoritative shipment lifecycle), a carrier webhook ingestion service that validates and deduplicates events from UPS/FedEx/DHL/USPS, an OR-Tools route-optimization worker that runs as a scalable background process, and an internal ops console. All AWS infrastructure is provisioned with modular Terraform using environment separation and automated remote state — the focus is service decomposition and infrastructure-as-code, not a single monolith.",
     technologies: [
-      "Claude Code",
-      "GitHub Actions",
-      "Jira",
-      "Secret Scanning",
-      "AI Agents",
-      "Context Engineering",
-    ],
-    github: "https://github.com/hannamarusych",
-  },
-
-  {
-    title: "IAM Normalization & OIDC-Federated CI/CD",
-    description:
-      "Owned the team's IAM in response to a security audit. Replaced ad-hoc, console-created roles spread across five engineers' repositories with one auditable, least-privilege scheme, and designed the canonical GitHub Actions Terraform role using GitHub OIDC federation — eliminating long-lived AWS keys. Separated AWS authentication from Kubernetes authorization so developers stay read-only on the cluster while CI/CD gets exactly the access it needs, rolled out incrementally with a validated PR into each repo.",
-    technologies: [
-      "AWS IAM",
-      "GitHub OIDC",
       "Terraform",
-      "EKS",
-      "Kubernetes RBAC",
-      "Least Privilege",
+      "AWS",
+      "Microservices",
+      "Docker",
+      "REST APIs",
+      "CI/CD",
     ],
-    github: "https://github.com/hannamarusych",
+    github: "https://github.com/hannamarusych/routebox-infra-tf-hanna",
   },
 
   {
-    title: "Centralized Logging & Read-Only Diagnostic Agent",
+    title: "Product Review System — 3-Tier App on AWS",
     description:
-      "Stood up the team's open-source logging stack (Elasticsearch, Fluentd, Kibana on EKS), with Fluentd dual-shipping to Elasticsearch for search and to S3 as a durable backup so a lost index is never a lost log. Built a read-only Claude Code diagnostic skill that takes a namespace, service, and bounded time window, groups recurring errors, and returns an evidence-cited hypothesis — collapsing a 20-minute manual log grep into a single command. Intentionally read-only: it diagnoses but can never act, keeping remediation a human decision.",
+      "A 3-tier web application on AWS where users add products and leave reviews: an Nginx-served frontend, a Python/Flask REST API, and a MySQL database. Containerized with Docker and designed for high availability and scalability, it demonstrates clean 3-tier separation, containerization, and cloud deployment end to end.",
     technologies: [
-      "Elasticsearch",
-      "Fluentd",
-      "Kibana",
-      "Amazon S3",
-      "EKS",
-      "Claude Code",
+      "AWS",
+      "Docker",
+      "Python",
+      "Flask",
+      "MySQL",
+      "Nginx",
     ],
-    github: "https://github.com/hannamarusych",
+    github: "https://github.com/hannamarusych/reviews-app",
   },
 ];
