@@ -1,57 +1,53 @@
 export const skills = [
   {
-    category: "Cloud & Infrastructure",
+    category: "Cloud & Systems",
     items: [
       "AWS",
-      "EKS",
-      "EC2",
-      "VPC",
+      "Amazon EKS",
+      "Amazon ECS",
+      "AWS Fargate",
+      "Amazon EC2",
+      "Amazon VPC",
       "IAM",
-      "S3",
-      "ECS",
+      "Amazon ECR",
+      "Amazon S3",
+      "AWS Lambda",
+      "Amazon CloudFront",
+      "AWS Secrets Manager",
     ],
+  },
+  {
+    category: "Containers & Orchestration",
+    items: ["Kubernetes", "Docker", "Helm"],
   },
   {
     category: "Infrastructure as Code",
-    items: [
-      "Terraform",
-      "CloudFormation",
-    ],
-  },
-  {
-    category: "Containers & Kubernetes",
-    items: [
-      "Kubernetes",
-      "Docker",
-      "Helm",
-      "AWS Load Balancer Controller",
-    ],
+    items: ["Terraform"],
   },
   {
     category: "CI/CD & Automation",
-    items: [
-      "GitHub Actions",
-      "Git",
-      "CI/CD",
-    ],
+    items: ["GitHub Actions", "GitLab CI/CD"],
   },
   {
     category: "Observability",
+    items: ["Prometheus", "Grafana", "Amazon CloudWatch"],
+  },
+  {
+    category: "Programming & Scripting",
+    items: ["Python", "Bash"],
+  },
+  {
+    category: "Agentic AI Workflows",
     items: [
-      "Prometheus",
-      "Grafana",
-      "Alertmanager",
-      "Elasticsearch",
-      "Kibana",
+      "Claude Code",
+      "Custom Skills",
+      "MCP Servers (read-only & mutating)",
+      "AWS Bedrock",
+      "Context Engineering (CLAUDE.md / AGENTS.md)",
     ],
   },
   {
-    category: "AI Engineering",
-    items: [
-      "Agentic AI Workflows",
-      "ChatGPT",
-      "Claude",
-      "GitHub Copilot",
-    ],
+    category: "Version Control & Collaboration",
+    items: ["Git", "GitHub", "GitLab", "Jira"],
   },
 ];

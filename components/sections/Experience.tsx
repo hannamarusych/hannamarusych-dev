@@ -3,12 +3,9 @@ import { Badge } from "@/components/ui/badge";
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="mx-auto max-w-7xl px-6 py-24"
-    >
+    <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
           Career
         </p>
 
@@ -17,8 +14,8 @@ export default function Experience() {
         </h2>
 
         <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Cloud infrastructure, platform engineering, automation,
-          and DevOps experience.
+          DevOps and cloud engineering experience across AWS, Kubernetes,
+          Terraform, CI/CD, security, and platform engineering.
         </p>
       </div>
 
@@ -38,28 +35,52 @@ export default function Experience() {
                   {item.role}
                 </h3>
 
-                <p className="mt-1 text-lg text-gray-500">
+                <p className="mt-1 text-lg font-medium text-gray-500">
                   {item.company}
+                </p>
+
+                <p className="mt-1 text-sm text-gray-500">
+                  {item.location}
                 </p>
               </div>
 
-              {item.technologies && (
-                <div className="flex flex-wrap gap-2 md:max-w-md md:justify-end">
-                  {item.technologies.map((technology) => (
-                    <Badge
-                      key={technology}
-                      variant="secondary"
-                    >
-                      {technology}
-                    </Badge>
-                  ))}
-                </div>
-              )}
+              <div className="flex flex-wrap gap-2 md:max-w-md md:justify-end">
+                {item.company === "Egencia" ? (
+                  <>
+                    <Badge variant="secondary">AWS</Badge>
+                    <Badge variant="secondary">Kubernetes</Badge>
+                    <Badge variant="secondary">Terraform</Badge>
+                    <Badge variant="secondary">GitHub Actions</Badge>
+                    <Badge variant="secondary">Prometheus</Badge>
+                    <Badge variant="secondary">Grafana</Badge>
+                  </>
+                ) : (
+                  <>
+                    <Badge variant="secondary">AWS</Badge>
+                    <Badge variant="secondary">EKS</Badge>
+                    <Badge variant="secondary">Terraform</Badge>
+                    <Badge variant="secondary">GitHub Actions</Badge>
+                    <Badge variant="secondary">ECR</Badge>
+                    <Badge variant="secondary">CloudWatch</Badge>
+                  </>
+                )}
+              </div>
             </div>
 
-            <p className="mt-6 max-w-4xl leading-8 text-gray-600">
-              {item.description}
-            </p>
+            <div className="mt-6 space-y-3">
+              {item.responsibilities.map((responsibility) => (
+                <div
+                  key={responsibility}
+                  className="flex gap-3 text-gray-600"
+                >
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-600" />
+
+                  <p className="leading-7">
+                    {responsibility}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         ))}
       </div>

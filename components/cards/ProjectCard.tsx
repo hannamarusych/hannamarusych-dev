@@ -1,13 +1,4 @@
-import Link from "next/link";
-import { ArrowUpRight, ExternalLink } from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
 type ProjectCardProps = {
@@ -24,19 +15,17 @@ export default function ProjectCard({
   github,
 }: ProjectCardProps) {
   return (
-    <Card className="group flex h-full flex-col transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+    <Card className="flex h-full flex-col transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <CardHeader>
-        <CardTitle className="text-2xl">
-          {title}
-        </CardTitle>
+        <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
 
       <CardContent className="flex flex-1 flex-col">
-        <p className="text-gray-600">
+        <p className="text-sm leading-7 text-gray-600">
           {description}
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {technologies.map((tech) => (
             <Badge key={tech} variant="secondary">
               {tech}
@@ -44,21 +33,15 @@ export default function ProjectCard({
           ))}
         </div>
 
-        <div className="mt-auto flex items-center justify-between pt-8">
-          <Link
+        <div className="mt-auto pt-6">
+          <a
             href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-semibold text-blue-600 transition hover:text-blue-800"
+            className="inline-flex items-center text-sm font-semibold text-blue-600 hover:underline"
           >
-            <ExternalLink size={18} />
-            View on GitHub
-          </Link>
-
-          <ArrowUpRight
-            size={20}
-            className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
-          />
+            View on GitHub →
+          </a>
         </div>
       </CardContent>
     </Card>

@@ -3,13 +3,10 @@ import { projects } from "@/content/projects";
 
 export default function FeaturedProjects() {
   return (
-    <section
-      id="projects"
-      className="mx-auto max-w-7xl px-6 py-24"
-    >
+    <section className="mx-auto max-w-7xl px-6 py-20">
       <div className="mb-12">
-        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">
-          Portfolio
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          Selected Work
         </p>
 
         <h2 className="mt-2 text-5xl font-bold">
@@ -17,13 +14,12 @@ export default function FeaturedProjects() {
         </h2>
 
         <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Production-inspired cloud infrastructure, platform engineering,
-          Kubernetes, Infrastructure as Code, and AI-assisted engineering
+          Selected cloud, DevOps, infrastructure, and AI-assisted engineering
           projects.
         </p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3">
         {projects.map((project) => (
           <ProjectCard
             key={project.title}

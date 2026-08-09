@@ -1,45 +1,88 @@
-import Link from "next/link";
+import { Mail, Phone } from "lucide-react";
+import { siteConfig } from "@/content/site";
 
 export default function Contact() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <div className="rounded-2xl border bg-white p-10">
-        <h2 className="text-4xl font-bold tracking-tight">
+      <div className="mb-12">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          Contact
+        </p>
+
+        <h2 className="mt-2 text-5xl font-bold">
           Let&apos;s Connect
         </h2>
 
         <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          Interested in cloud infrastructure, platform engineering,
-          Kubernetes, Terraform, or AI-assisted engineering workflows?
-          Feel free to reach out.
+          Open to opportunities in DevOps, Cloud Engineering, and Platform
+          Engineering.
         </p>
+      </div>
 
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href="mailto:devopsannai@gmail.com"
-            className="rounded-md bg-black px-5 py-3 text-sm font-medium text-white hover:bg-gray-800"
-          >
-            Email
-          </Link>
+      <div className="grid gap-6 md:grid-cols-2">
+        <a
+          href={`mailto:${siteConfig.email}`}
+          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="flex items-center gap-4">
+            <div className="rounded-xl bg-blue-50 p-3">
+              <Mail className="h-6 w-6 text-blue-600" />
+            </div>
 
-          <Link
-            href="https://github.com/hannamarusych"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border px-5 py-3 text-sm font-medium hover:bg-gray-50"
-          >
-            GitHub
-          </Link>
+            <div>
+              <p className="text-sm text-gray-500">Email</p>
+              <p className="font-semibold group-hover:text-blue-600">
+                {siteConfig.email}
+              </p>
+            </div>
+          </div>
+        </a>
 
-          <Link
-            href="https://www.linkedin.com/in/hanna-marusych"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-md border px-5 py-3 text-sm font-medium hover:bg-gray-50"
-          >
-            LinkedIn
-          </Link>
-        </div>
+        <a
+          href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}
+          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div className="flex items-center gap-4">
+            <div className="rounded-xl bg-blue-50 p-3">
+              <Phone className="h-6 w-6 text-blue-600" />
+            </div>
+
+            <div>
+              <p className="text-sm text-gray-500">Phone</p>
+              <p className="font-semibold group-hover:text-blue-600">
+                {siteConfig.phone}
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a
+          href={siteConfig.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div>
+            <p className="text-sm text-gray-500">GitHub</p>
+            <p className="mt-1 font-semibold group-hover:text-blue-600">
+              github.com/hannamarusych
+            </p>
+          </div>
+        </a>
+
+        <a
+          href={siteConfig.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div>
+            <p className="text-sm text-gray-500">LinkedIn</p>
+            <p className="mt-1 font-semibold group-hover:text-blue-600">
+              linkedin.com/in/hanna-marusych
+            </p>
+          </div>
+        </a>
       </div>
     </section>
   );

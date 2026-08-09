@@ -1,25 +1,42 @@
-import { Badge } from "@/components/ui/badge";
 import { skills } from "@/content/skills";
+import { Badge } from "@/components/ui/badge";
 
 export default function Skills() {
   return (
     <section className="mx-auto max-w-7xl px-6 py-20">
-      <h2 className="text-4xl font-bold tracking-tight">Skills</h2>
+      <div className="mb-12">
+        <p className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+          Technical Stack
+        </p>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {skills.map((skillGroup) => (
+        <h2 className="mt-2 text-5xl font-bold">
+          Skills
+        </h2>
+
+        <p className="mt-4 max-w-2xl text-lg text-gray-600">
+          Technologies and tools used across cloud infrastructure,
+          Kubernetes, Infrastructure as Code, CI/CD, observability,
+          scripting, and AI-assisted engineering.
+        </p>
+      </div>
+
+      <div className="grid gap-6 md:grid-cols-2">
+        {skills.map((skill) => (
           <div
-            key={skillGroup.category}
-            className="rounded-xl border bg-white p-6"
+            key={skill.category}
+            className="rounded-2xl border bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
           >
-            <h3 className="text-lg font-semibold">
-              {skillGroup.category}
+            <h3 className="text-xl font-bold">
+              {skill.category}
             </h3>
 
             <div className="mt-4 flex flex-wrap gap-2">
-              {skillGroup.items.map((skill) => (
-                <Badge key={skill} variant="secondary">
-                  {skill}
+              {skill.items.map((item) => (
+                <Badge
+                  key={item}
+                  variant="secondary"
+                >
+                  {item}
                 </Badge>
               ))}
             </div>
