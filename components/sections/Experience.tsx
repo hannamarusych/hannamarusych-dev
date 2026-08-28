@@ -1,3 +1,5 @@
+import { experience } from "@/content/experience";
+
 export default function Experience() {
   return (
     <section id="experience" className="border-t border-gray-200 bg-white">
@@ -12,145 +14,63 @@ export default function Experience() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            My experience spans cloud infrastructure, Kubernetes platforms,
-            automation, security, and production operations across
-            business-critical systems.
+            Nearly 6 years building and operating AWS and Kubernetes platforms
+            for high-scale consumer and B2B products — delivery paths,
+            Terraform modules, routing, observability, and the agentic tooling
+            on top.
           </p>
         </div>
 
         <div className="mt-16">
-          <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                April 2023 — Present
-              </p>
+          {experience.map((role) => (
+            <article
+              key={role.company}
+              className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[200px_1fr]"
+            >
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
+                  {role.period}
+                </p>
 
-              <p className="mt-2 text-sm text-gray-500">
-                Chicago, IL · Hybrid
-              </p>
-            </div>
-
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">
-                Egencia · American Express Global Business Travel
-              </p>
-
-              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
-                DevOps Engineer
-              </h3>
-
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
-                Cloud and platform engineer building and operating AWS and
-                Kubernetes infrastructure that enables Egencia&apos;s global
-                business-travel services to ship and run reliably at scale.
-              </p>
-
-              <div className="mt-8 grid gap-8 md:grid-cols-2">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Platform
-                  </p>
-
-                  <p className="mt-3 text-base leading-7 text-gray-600">
-                    Built and operated Kubernetes platforms with EKS, Docker,
-                    Helm, Terraform, and GitOps delivery workflows. Focused on
-                    repeatable infrastructure and reducing operational
-                    friction for engineering teams.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Impact
-                  </p>
-
-                  <p className="mt-3 text-base leading-7 text-gray-600">
-                    Contributed to the migration of ML model-serving workloads
-                    from AWS SageMaker to Amazon EKS, with an individual
-                    inference workload achieving up to 66% lower operating
-                    costs through Kubernetes-based resource optimization and
-                    autoscaling.
-                  </p>
-                </div>
+                <p className="mt-2 text-sm text-gray-500">{role.location}</p>
               </div>
 
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
-                <span>AWS</span>
-                <span>EKS</span>
-                <span>Kubernetes</span>
-                <span>Terraform</span>
-                <span>Helm</span>
-                <span>GitOps</span>
-                <span>Security</span>
-                <span>Observability</span>
-              </div>
-            </div>
-          </article>
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">
+                  {role.company}
+                </p>
 
-          <article className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[180px_1fr]">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                August 2020 — March 2023
-              </p>
+                <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
+                  {role.role}
+                </h3>
 
-              <p className="mt-2 text-sm text-gray-500">
-                New York, NY · Remote
-              </p>
-            </div>
+                <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
+                  {role.summary}
+                </p>
 
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gray-500">
-                FanDuel
-              </p>
+                <ul className="mt-8 max-w-3xl space-y-4 border-t border-gray-200 pt-8">
+                  {role.responsibilities.map((item) => (
+                    <li
+                      key={item}
+                      className="grid grid-cols-[16px_1fr] gap-3 text-base leading-7 text-gray-600"
+                    >
+                      <span
+                        aria-hidden="true"
+                        className="mt-3 h-px w-3 bg-gray-400"
+                      />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
 
-              <h3 className="mt-3 text-3xl font-bold tracking-tight text-gray-950">
-                Cloud Engineer
-              </h3>
-
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-700">
-                Managed AWS-based infrastructure supporting high-scale sports
-                and gaming workloads, with a focus on cloud infrastructure,
-                automation, reliability, and data-platform operations.
-              </p>
-
-              <div className="mt-8 grid gap-8 md:grid-cols-2">
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Platform
-                  </p>
-
-                  <p className="mt-3 text-base leading-7 text-gray-600">
-                    Worked across AWS infrastructure including EC2, EKS, RDS,
-                    Lambda, and Terraform-managed environments, supporting
-                    production systems and data workloads.
-                  </p>
-                </div>
-
-                <div>
-                  <p className="text-sm font-semibold uppercase tracking-wider text-gray-500">
-                    Scale &amp; Impact
-                  </p>
-
-                  <p className="mt-3 text-base leading-7 text-gray-600">
-                    Supported infrastructure behind a large-scale consumer
-                    platform while the data platform evolved toward higher
-                    query concurrency, improved workload efficiency, and
-                    significantly lower operating costs.
-                  </p>
+                <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
+                  {role.stack.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
                 </div>
               </div>
-
-              <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-gray-500">
-                <span>AWS</span>
-                <span>EKS</span>
-                <span>Terraform</span>
-                <span>EC2</span>
-                <span>RDS</span>
-                <span>Lambda</span>
-                <span>Cloud Infrastructure</span>
-              </div>
-            </div>
-          </article>
+            </article>
+          ))}
         </div>
 
         <div className="mt-8 border-t border-gray-200 pt-10">

@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hanna Marusych | DevOps Engineer",
+  title: "Hanna Marusych | Platform Engineer",
   description:
-    "DevOps Engineer specializing in AWS, Kubernetes, Terraform, CI/CD, and Agentic AI Workflows.",
+    "Platform Engineer building and operating AWS and Kubernetes platforms — Terraform, GitOps delivery, observability, and Claude Code tooling on top.",
 };
 
 export default function RootLayout({

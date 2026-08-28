@@ -13,9 +13,9 @@ export default function FeaturedProjects() {
           </h2>
 
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            A few examples of infrastructure, platform engineering, cloud
-            migration, and AI-assisted engineering work. The goal is not just
-            to list technologies, but to show the problems I solve with them.
+            A few examples of infrastructure, platform engineering, and
+            cloud migration work. The goal is not just to list technologies,
+            but to show the problems I solve with them.
           </p>
         </div>
 
@@ -23,7 +23,7 @@ export default function FeaturedProjects() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[80px_1fr_180px]"
+              className="grid gap-8 border-t border-gray-300 py-12 lg:grid-cols-[80px_1fr]"
             >
               <div className="text-sm font-semibold text-gray-400">
                 {String(index + 1).padStart(2, "0")}
@@ -43,19 +43,6 @@ export default function FeaturedProjects() {
                     <span key={technology}>{technology}</span>
                   ))}
                 </div>
-              </div>
-
-              <div className="lg:text-right">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm font-semibold text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
-                  >
-                    View project →
-                  </a>
-                )}
               </div>
             </article>
           ))}

@@ -11,7 +11,6 @@ export const projects = [
       "IPv6",
       "GitHub Actions",
     ],
-    github: "https://github.com/hannamarusych/extra-migration",
   },
 
   {
@@ -26,7 +25,6 @@ export const projects = [
       "REST APIs",
       "CI/CD",
     ],
-    github: "https://github.com/hannamarusych/routebox-infra-tf-hanna",
   },
 
   {
@@ -41,6 +39,5 @@ export const projects = [
       "MySQL",
       "Nginx",
     ],
-    github: "https://github.com/hannamarusych/reviews-app",
   },
 ];

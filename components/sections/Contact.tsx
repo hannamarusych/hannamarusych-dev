@@ -15,14 +15,14 @@ export default function Contact() {
             </h2>
 
             <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
-              I&apos;m open to opportunities in DevOps, Cloud Engineering,
-              Platform Engineering, and infrastructure-focused roles.
+              I&apos;m open to Platform Engineering, DevOps, Cloud
+              Engineering, and other infrastructure-focused roles.
             </p>
 
             <p className="mt-6 max-w-2xl text-base leading-7 text-gray-500">
-              If you&apos;re working on cloud infrastructure, Kubernetes,
-              platform automation, or the next stage of engineering
-              modernization, I&apos;d be happy to connect.
+              If you&apos;re working on Kubernetes platforms, delivery
+              paths, infrastructure automation, or agentic tooling for
+              engineering teams, I&apos;d be happy to connect.
             </p>
 
             <div className="mt-10">
@@ -60,21 +60,6 @@ export default function Contact() {
                   className="mt-2 block text-base font-medium text-gray-900"
                 >
                   {siteConfig.phone}
-                </a>
-              </div>
-
-              <div>
-                <p className="text-sm font-semibold uppercase tracking-wider text-gray-400">
-                  GitHub
-                </p>
-
-                <a
-                  href={siteConfig.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-2 block text-base font-medium text-gray-900 underline decoration-gray-300 underline-offset-4 transition-colors hover:decoration-gray-900"
-                >
-                  github.com/hannamarusych
                 </a>
               </div>
 

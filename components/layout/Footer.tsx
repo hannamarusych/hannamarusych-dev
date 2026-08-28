@@ -17,15 +17,6 @@ export default function Footer() {
           </a>
 
           <a
-            href={siteConfig.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-gray-950"
-          >
-            GitHub
-          </a>
-
-          <a
             href={siteConfig.linkedin}
             target="_blank"
             rel="noopener noreferrer"

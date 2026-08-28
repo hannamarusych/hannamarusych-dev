@@ -1,4 +1,5 @@
 import { certifications } from "@/content/certifications";
+import { education } from "@/content/education";
 
 export default function Education() {
   return (
@@ -15,16 +16,12 @@ export default function Education() {
 
           <div className="mt-10 border-t border-gray-300 pt-7">
             <h3 className="text-xl font-bold text-gray-950">
-              Bachelor&apos;s Degree in Management of Organizations
+              {education.degree}
             </h3>
 
-            <p className="mt-2 text-gray-600">
-              National Aviation University
-            </p>
+            <p className="mt-2 text-gray-600">{education.school}</p>
 
-            <p className="mt-1 text-sm text-gray-500">
-              Kyiv, Ukraine
-            </p>
+            <p className="mt-1 text-sm text-gray-500">{education.location}</p>
           </div>
         </div>
 
